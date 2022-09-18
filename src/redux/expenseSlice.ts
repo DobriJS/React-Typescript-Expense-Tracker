@@ -19,6 +19,28 @@ export const expenseSlice = createSlice({
           amount: parseFloat(action.payload.amount)
         });
       }
+    },
+    calculateBalance: (state, action: PayloadAction<void>) => {
+      state.balance = state.expenseHistory.reduce(
+        (acc, curr) => acc + curr.amount,
+        0
+      );
+    },
+    calculateIncome: (state, action: PayloadAction<void>) => {
+      state.expense = state.expenseHistory.reduce((acc, curr) => {
+        if (curr.amount > 0) {
+          return Math.abs(acc + curr.amount);
+        }
+        return acc;
+      }, 0);
+    },
+    calculateExpense: (state, action: PayloadAction<void>) => {
+      state.expense = state.expenseHistory.reduce((acc, curr) => {
+        if (curr.amount < 0) {
+          return Math.abs(acc + curr.amount);
+        }
+        return acc;
+      }, 0);
     }
   }
 });
