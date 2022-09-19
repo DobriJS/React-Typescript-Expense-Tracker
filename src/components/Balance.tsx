@@ -3,8 +3,8 @@ import { useAppSelector } from '../hooks/hooks';
 const Balance = () => {
   const balance = useAppSelector((state) => state.expense.balance);
   return (
-    <div>
-      Your Balance: <span>$ {balance}</span>
+    <div className='fw-bold'>
+      Your Balance: <span className='text-muted'>$ {balance}</span>
     </div>
   );
 };
