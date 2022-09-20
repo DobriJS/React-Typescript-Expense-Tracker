@@ -32,6 +32,10 @@ const TransactionForm = () => {
       dispatch(calculateIncome());
       dispatch(calculateExpense());
     }
+    setExpense({
+      expenseName: '',
+      amount: ''
+    });
   };
 
   return (
@@ -43,6 +47,7 @@ const TransactionForm = () => {
           onChange={(e) =>
             onChange(e.target.name as keyof ExpenseProps, e.target.value)
           }
+          value={expense.expenseName}
           name='expenseName'
           type='text'
           placeholder='Enter Text'
@@ -54,12 +59,15 @@ const TransactionForm = () => {
           onChange={(e) =>
             onChange(e.target.name as keyof ExpenseProps, e.target.value)
           }
+          value={expense.amount}
           name='amount'
           type='text'
           placeholder='Enter Amount'
         />
       </Form.Group>
-      <Button onClick={onClick}>Add Transaction</Button>
+      <Button className='mx-auto' onClick={onClick}>
+        Add Transaction
+      </Button>
     </div>
   );
 };

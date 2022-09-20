@@ -27,7 +27,7 @@ export const expenseSlice = createSlice({
       );
     },
     calculateIncome: (state, action: PayloadAction<void>) => {
-      state.expense = state.expenseHistory.reduce((acc, curr) => {
+      state.income = state.expenseHistory.reduce((acc, curr) => {
         if (curr.amount > 0) {
           return Math.abs(acc + curr.amount);
         }

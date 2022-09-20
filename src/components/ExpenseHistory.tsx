@@ -13,7 +13,7 @@ const ExpenseHistory = () => {
               : 'shadow-sm p-1 my-2 d-flex bg-success rounded text-white'
           }
         >
-          <div>{ex.expenseName}</div>
+          <div className='me-1 ps-1'>{ex.expenseName}</div>
           <div>{ex.amount}</div>
         </div>
       ))}

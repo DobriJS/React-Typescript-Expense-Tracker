@@ -8,7 +8,7 @@ function App() {
   return (
     <Container
       className='d-flex flex-column align-items-center mt-5 card shadow rounded p-3'
-      style={{ maxWidth: '500px' }}
+      style={{ maxWidth: '380px' }}
     >
       <Balance />
       <IncomeAndExpense />
