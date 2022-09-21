@@ -1,4 +1,4 @@
-import { useAppSelector } from '../hooks/hooks';
+import { useAppSelector } from '../../hooks/hooks';
 
 const ExpenseHistory = () => {
   const expenses = useAppSelector((state) => state.expense.expenseHistory);

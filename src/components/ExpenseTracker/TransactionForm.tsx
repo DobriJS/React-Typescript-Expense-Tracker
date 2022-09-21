@@ -1,13 +1,13 @@
 import { useState } from 'react';
 import { Form, Button } from 'react-bootstrap';
-import { useAppDispatch } from '../hooks/hooks';
-import { ExpenseProps } from '../interfaces';
+import { useAppDispatch } from '../../hooks/hooks';
+import { ExpenseProps } from '../../interfaces';
 import {
   addExpenseToHistory,
   calculateBalance,
   calculateExpense,
   calculateIncome
-} from '../redux/expenseSlice';
+} from '../../redux/expenseSlice';
 
 const TransactionForm = () => {
   const dispatch = useAppDispatch();
@@ -56,7 +56,7 @@ const TransactionForm = () => {
           }
           name='amount'
           type='text'
-          placeholder='Enter Amount'
+          placeholder='ex.. -100 / 100'
         />
       </Form.Group>
       <Button onClick={onClick}>Add Transaction</Button>
