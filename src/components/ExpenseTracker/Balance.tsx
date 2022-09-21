@@ -1,4 +1,4 @@
-import { useAppSelector } from '../hooks/hooks';
+import { useAppSelector } from '../../hooks/hooks';
 
 const Balance = () => {
   const balance = useAppSelector((state) => state.expense.balance);

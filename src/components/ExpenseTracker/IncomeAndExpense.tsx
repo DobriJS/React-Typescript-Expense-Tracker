@@ -1,5 +1,5 @@
 import { Stack } from 'react-bootstrap';
-import { useAppSelector } from '../hooks/hooks';
+import { useAppSelector } from '../../hooks/hooks';
 
 const IncomeAndExpense = () => {
   const income = useAppSelector((state) => state.expense.income);
