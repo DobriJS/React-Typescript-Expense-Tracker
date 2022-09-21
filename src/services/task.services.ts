@@ -9,9 +9,9 @@ const get = (id: any) => {
   return http.get<TaskProps>(`/tasks/${id}`);
 };
 
-const TaskService = {
+const TaskServices = {
   getAll,
   get
 };
 
-export default TaskService;
+export default TaskServices;
