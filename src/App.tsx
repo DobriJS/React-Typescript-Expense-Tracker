@@ -1,9 +1,8 @@
-// import ExpenseTrackerContainer from './components/ExpenseTracker/ExpenseTrackerContainer';
-import TaskManagerContainer from './components/TaskManager/TaskManagerContainer';
+import ExpenseTrackerContainer from './components/ExpenseTracker/ExpenseTrackerContainer';
 import './App.css';
 
 function App() {
-  return <TaskManagerContainer />;
+  return <ExpenseTrackerContainer />;
 }
 
 export default App;
